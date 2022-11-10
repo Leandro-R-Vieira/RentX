@@ -1,7 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components'; 
-import { Home } from './src/Screens/Home';
+import { CarDetails } from './src/Screens/CarDetails';
 import {
   useFonts,
   Inter_400Regular,
@@ -13,6 +13,7 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 import theme from './src/styles/theme';
+import { StatusBar } from 'react-native';
 
 
 
@@ -31,7 +32,11 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <StatusBar
+        barStyle='dark-content'
+        backgroundColor='transparent'        
+      />
+      <CarDetails />
     </ThemeProvider>
     
   )  

@@ -1,6 +1,6 @@
 import React from 'react';
 import GasolineSvg from '../../assets/gasoline.svg';
-import { 
+import {
   Container,
   Details,
   Brand,
@@ -11,18 +11,31 @@ import {
   Price,
   Type,
   CarImage,
- } from './styles';
+} from './styles';
 
-export function Car() {
+interface CarData {
+  brand: string;
+  name: string;
+  rent: {
+    period: string;
+    price: number;
+  },
+  thumbnail: string;
+}
+interface Props {
+  data: CarData;
+}
+
+export function Car({ data }: Props) {
   return (
     <Container>
       <Details >
-        <Brand>AUDI</Brand>
-        <Name>RS 5 Coupé</Name>
+        <Brand>{data.brand}</Brand>
+        <Name>{data.name}</Name>
         <About>
           <Rent>
-            <Period>AO DIA</Period>
-            <Price>R$ 120</Price>
+            <Period>{data.rent.period}</Period>
+            <Price>{`R$ ${data.rent.price}`}</Price>
           </Rent>
 
           <Type>
@@ -31,7 +44,10 @@ export function Car() {
         </About>
       </Details>
 
-    <CarImage source={{ uri: '' }} />
+      <CarImage
+       source={{ uri: data.thumbnail }} 
+       
+      />
 
     </Container>
   )

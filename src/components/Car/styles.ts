@@ -17,6 +17,7 @@ export const Details = styled.View`
 `;
 
 export const Brand = styled.Text`
+  text-transform: uppercase;
   font-size: ${RFValue(10)}px;
   color: ${({ theme }) => theme.colors.text_detail};
   font-family: ${({ theme }) => theme.fonts.secondary_500};
@@ -29,25 +30,33 @@ export const Name = styled.Text`
 `;
 
 export const About = styled.View`
-
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
 `;
 
 export const Rent = styled.View`
-
+  margin-right: 24px;  
 `;
 
 export const Period = styled.Text`
-
+  text-transform: uppercase;
+  font-size: ${RFValue(10)}px;
+  color: ${({ theme }) => theme.colors.text_detail};
+  font-family: ${({ theme }) => theme.fonts.secondary_500};
 `;
 
-export const Price = styled.Text`
-
+export const Price = styled.Text`  
+  font-size: ${RFValue(15)}px;
+  color: ${({ theme }) => theme.colors.main};
+  font-family: ${({ theme }) => theme.fonts.secondary_500};
 `;
 
 export const Type = styled.View`
-
+  margin-bottom: -10px;
 `;
 
 export const CarImage = styled.Image`
-
+  width: 167px;
+  height: 85px;
 `;
