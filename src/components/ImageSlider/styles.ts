@@ -34,6 +34,6 @@ export const CarImageWrapper = styled.View`
 `;
 
 export const CarImage = styled.Image`
-  width: ${RFValue(280)}px;
-  height: ${RFValue(132)}px;
+  width: 280px;
+  height: 132px;
 `;
