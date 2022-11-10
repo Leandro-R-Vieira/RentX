@@ -62,6 +62,7 @@ export const Rent = styled.View`
 `;
 
 
+
 export const Period = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.text_detail};
@@ -92,4 +93,10 @@ export const Accessories = styled.View`
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
+`;
+
+export const Footer = styled.View`
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.background_secondary};
+  padding: 24px 24px 24px; 
 `;
