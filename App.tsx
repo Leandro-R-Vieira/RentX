@@ -1,7 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components'; 
-import { CarDetails } from './src/Screens/CarDetails';
+import { Scheduling } from './src/Screens/Scheduling';
 import {
   useFonts,
   Inter_400Regular,
@@ -31,12 +31,8 @@ export default function App() {
     return <AppLoading />
   }
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle='dark-content'
-        backgroundColor='transparent'        
-      />
-      <CarDetails />
+    <ThemeProvider theme={theme}>      
+      <Scheduling />
     </ThemeProvider>
     
   )  
