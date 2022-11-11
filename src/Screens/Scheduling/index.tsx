@@ -1,8 +1,11 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { useTheme } from 'styled-components';
-import { BackButton } from '../../components/BackButton';
 import ArrowSvg from '../../assets/arrow.svg';
+import { Button } from '../../components/Button';
+import { Calendar } from '../../components/Calendar';
+import { BackButton } from '../../components/BackButton';
+
 import {
   Container,
   Header,
@@ -14,7 +17,6 @@ import {
   Content,
   Footer,
 } from './styles';
-import { Button } from '../../components/Button';
 
 export function Scheduling() {
   const theme = useTheme();
@@ -51,7 +53,7 @@ export function Scheduling() {
         </RentalPeriod>
       </Header>
       <Content>
-
+        <Calendar />
       </Content>
       <Footer>
         <Button title="Confirmar"/>
