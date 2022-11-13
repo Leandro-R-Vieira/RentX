@@ -1,7 +1,8 @@
 import React from 'react';
+import { Routes } from './src/routes';
+import theme from './src/styles/theme';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components'; 
-import { Scheduling } from './src/Screens/Scheduling';
 import {
   useFonts,
   Inter_400Regular,
@@ -12,11 +13,7 @@ import {
   Archivo_500Medium,
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
-import theme from './src/styles/theme';
 import { StatusBar } from 'react-native';
-
-
-
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,8 +28,8 @@ export default function App() {
     return <AppLoading />
   }
   return (
-    <ThemeProvider theme={theme}>      
-      <Scheduling />
+    <ThemeProvider theme={theme}>     
+      <Routes />
     </ThemeProvider>
     
   )  
