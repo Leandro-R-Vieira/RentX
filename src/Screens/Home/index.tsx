@@ -15,27 +15,36 @@ import {
   CarList
 } from './styles';
 
+interface NavigationProps{
+  navigate:(
+    screen: string,
+    carObject:{
+      car: CarDTO
+    }
+  ) => void
+}
+
 export function Home() {
   const [cars, setCars] = useState<CarDTO[]>([]);
   const [loading, setLoading] = useState(true);
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
-  function handleCarDetails() {
-    navigation.navigate('CarDetails')
+  function handleCarDetails(car: CarDTO) {
+    navigation.navigate('CarDetails', {car})
   }
 
   useEffect(() => {
+        
     async function fetchCars() {
-      try {
-        const response = await api.get('./cars');
-        setCars(response.data);
+      try {        
+        const response = await api.get('/cars');        
+        setCars(response.data);        
       } catch (error) {
         console.log(error);
       } finally {
         setLoading(false);
       }
     }
-
     fetchCars();
   }, [])
 
@@ -60,7 +69,7 @@ export function Home() {
           data={cars}
           keyExtractor={item => item.id}
           renderItem={({ item }) => 
-          <Car data={item} onPress={handleCarDetails} />}
+          <Car data={item} onPress={() => handleCarDetails(item)} />}
         />
       }
     </Container>
