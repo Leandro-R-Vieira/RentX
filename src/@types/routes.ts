@@ -11,4 +11,5 @@ export type RentxRoutesList = {
     dates: string[];
   };
   SchedulingComplete: undefined;
+  MyCars: undefined;
 }
