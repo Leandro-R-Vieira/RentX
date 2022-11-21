@@ -13,6 +13,7 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -26,7 +27,7 @@ export default function App() {
     return null;
   }
   return (
-    <ThemeProvider theme={theme}>     
+    <ThemeProvider theme={theme}>        
       <Routes />
     </ThemeProvider>
     

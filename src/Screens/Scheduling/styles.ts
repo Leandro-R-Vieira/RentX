@@ -13,7 +13,7 @@ export const Header = styled.View`
   width: 100%;
   height: 325px;    
   padding: 25px;  
-  padding-top: 30px;
+  padding-top: 70px;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.header};
 `;
@@ -22,7 +22,7 @@ export const Title = styled.Text`
   font-size: ${RFValue(34)}px;
   color: ${({ theme }) => theme.colors.shape};
   font-family: ${({ theme }) => theme.fonts.secondary_600};
-  margin-top: 24px;
+  margin-top: 20px;
 `;
 
 export const RentalPeriod = styled.View`

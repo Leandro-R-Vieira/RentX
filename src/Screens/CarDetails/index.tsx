@@ -24,18 +24,19 @@ import {
   Accessories,
   Footer,
 } from './styles';
+import { StatusBar } from 'react-native';
 
 interface Params {
   car: CarDTO;
 }
 
 export function CarDetails() {
-  const route = useRoute();
   const navigation = useNavigation();
+  const route = useRoute();
   const { car } = route.params as Params;
 
   function handleConfirmRental() {
-    navigation.navigate('Scheduling');
+    navigation.navigate('Scheduling', { car });
   }
 
   function handleBack() {
@@ -44,6 +45,11 @@ export function CarDetails() {
 
   return (
     <Container>
+      <StatusBar
+        barStyle="dark-content"
+        translucent={false}
+        backgroundColor="transparent"
+      />
       <Header>
         <BackButton onPress={handleBack} />
       </Header>

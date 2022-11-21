@@ -2,7 +2,7 @@ import React from 'react';
 import DoneSvg from '../../assets/done.svg';
 import LogoSvg from '../../assets/logo_background_gray.svg';
 
-import { useWindowDimensions } from 'react-native';
+import { StatusBar, useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ConfirmButton } from '../../components/ConfirmButton';
 import { 
@@ -23,7 +23,12 @@ export function SchedulingComplete() {
   }
 
   return (
-    <Container>     
+    <Container> 
+      <StatusBar 
+        barStyle="light-content"
+        translucent
+        backgroundColor="transparent"
+      />    
       <LogoSvg width={width}/>
       <Content>
         <DoneSvg width={80} height={80}/>

@@ -40,6 +40,7 @@ import {
 } from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
 
 
 export function SchedulingDetails() {
@@ -48,13 +49,22 @@ export function SchedulingDetails() {
   const navigation = useNavigation();
 
   function handleConfirmRental() {
-    navigation.navigate('SchedulingComplete')
+    navigation.navigate('SchedulingComplete');
+  }
+
+  function handleBack() {
+    navigation.goBack();
   }
 
   return (
-    <Container>      
+    <Container>
+      <StatusBar 
+        barStyle="dark-content"
+        translucent={false}
+        backgroundColor="transparent"
+      />       
       <Header>
-        <BackButton onPress={() => { }} />
+        <BackButton onPress={handleBack} />
       </Header>
       <CarImages>
         <ImageSlider imagesUrl={['https://www.webmotors.com.br/imagens/prod/348415/AUDI_RS5_2.9_V6_TFSI_GASOLINA_SPORTBACK_QUATTRO_STRONIC_34841515342559092.webp?s=fill&w=236&h=135&q=70&t=true']} />
