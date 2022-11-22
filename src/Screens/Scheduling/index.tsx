@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { StatusBar } from 'react-native';
 import { CarDTO } from '../../dtos/CarDTO';
 import { format, parseISO } from 'date-fns';
 import { useTheme } from 'styled-components';
 import ArrowSvg from '../../assets/arrow.svg';
-import { Alert, StatusBar } from 'react-native';
 import { Button } from '../../components/Button';
 import { BackButton } from '../../components/BackButton';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -45,14 +45,10 @@ export function Scheduling() {
   const { car } = route.params as Params;
 
   function handleConfirmRental() {
-    if (!rentalPeriod.startFormatted || !rentalPeriod.endFormatted) {
-      Alert.alert('Selecione o período de aluguel.');
-    } else {
-      navigation.navigate('SchedulingDetails', {
-        car,
-        dates: Object.keys(markedDates),        
-      });      
-    }
+    navigation.navigate('SchedulingDetails', {
+      car,
+      dates: Object.keys(markedDates),
+    });
   }
 
   function handleBack() {
@@ -74,7 +70,7 @@ export function Scheduling() {
     const firstDate = Object.keys(interval)[0];
     const endDate = Object.keys(interval)[Object.keys(interval).length - 1];
 
-    setRentalPeriod({      
+    setRentalPeriod({
       startFormatted: format(parseISO(firstDate), 'dd/MM/yyyy'),
       endFormatted: format(parseISO(endDate), 'dd/MM/yyyy')
     })
@@ -123,7 +119,11 @@ export function Scheduling() {
         />
       </Content>
       <Footer>
-        <Button title="Confirmar" onPress={handleConfirmRental} />
+        <Button
+          title="Confirmar"
+          onPress={handleConfirmRental}
+          enabled={!!rentalPeriod.endFormatted}
+        />
       </Footer>
     </Container>
   );
