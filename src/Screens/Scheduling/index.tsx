@@ -23,8 +23,8 @@ import {
 import {
   Calendar,
   DayProps,
-  generateInterval,
-  MarkedDateProps
+  MarkedDateProps,
+  generateInterval
 } from '../../components/Calendar';
 interface RentalPeriod {
   startFormatted: string;
