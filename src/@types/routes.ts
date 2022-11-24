@@ -12,4 +12,5 @@ export type RentxRoutesList = {
   };
   SchedulingComplete: undefined;
   MyCars: undefined;
+  Splash: undefined;
 }

@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Home } from '../Screens/Home';
 import { MyCars } from '../Screens/MyCars';
+import { Splash } from '../Screens/Splash';
 import { CarDetails } from '../Screens/CarDetails';
 import { Scheduling } from '../Screens/Scheduling';
 import { SchedulingDetails } from '../Screens/SchedulingDetails';
@@ -13,7 +14,10 @@ const { Navigator, Screen } = createNativeStackNavigator<RentxRoutesList>();
 
 export function StackRoutes(){
   return(
-    <Navigator screenOptions={{ headerShown: false}} >
+    <Navigator screenOptions={{ headerShown: false}} initialRouteName='Splash'>
+      <Screen
+        name="Splash" component={Splash}
+      />
       <Screen
         name="Home" component={Home}
       />
