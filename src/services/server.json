@@ -135,7 +135,7 @@
       "about": "Este é automóvel desportivo. Surgiu do lendário touro de lide indultado na praça Real Maestranza de Sevilla. É um belíssimo carro para quem gosta de acelerar.",
       "rent": {
         "period": "Ao dia",
-        "price": 120
+        "price": 510
       },
       "fuel_type": "electric_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/4.png",
@@ -178,7 +178,7 @@
       "about": "A Poderosa Combinação de um Motor Elétrico de Alto Desempenho e um Motor a Combustão. Compacto e Inovador. Com Design Expressivo, Tecnologias Intuitivas e Estilo Urbano.",
       "rent": {
         "period": "Ao dia",
-        "price": 120
+        "price": 230
       },
       "fuel_type": "gasoline_motor",
       "thumbnail": "https://storage.googleapis.com/golden-wind/ignite/react-native/thumbnails/5.png",
