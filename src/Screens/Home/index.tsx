@@ -2,7 +2,7 @@ import { api } from '../../services/api';
 import Logo from '../../assets/logo.svg';
 import { CarDTO } from '../../dtos/CarDTO';
 import { Car } from '../../components/Car';
-import { Load } from '../../components/Load';
+import { LoadAnimation } from '../../components/LoadAnimation';
 import { useTheme } from 'styled-components';
 import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
@@ -124,7 +124,7 @@ export function Home() {
           }
         </HeaderContent>
       </Header>
-      {loading ? <Load /> :
+      {loading ? <LoadAnimation /> :
         <CarList
           data={cars}
           keyExtractor={item => item.id}
