@@ -102,7 +102,7 @@ export function SchedulingDetails() {
     <Container>
       <StatusBar
         barStyle="dark-content"
-        translucent={false}
+        translucent
         backgroundColor="transparent"
       />
       <Header>

@@ -80,8 +80,8 @@ export function Scheduling() {
   return (
     <Container>
       <StatusBar
-        barStyle="light-content"
-        translucent
+        barStyle="dark-content"   
+        translucent     
         backgroundColor="transparent"
       />
       <Header>

@@ -83,7 +83,7 @@ export function CarDetails() {
     <Container>
       <StatusBar
         barStyle="dark-content"
-        translucent={false}
+        translucent
         backgroundColor="transparent"
       />
 

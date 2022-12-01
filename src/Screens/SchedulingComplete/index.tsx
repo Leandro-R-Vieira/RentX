@@ -25,7 +25,7 @@ export function SchedulingComplete() {
   return (
     <Container> 
       <StatusBar 
-        barStyle="light-content"
+        barStyle="dark-content"
         translucent
         backgroundColor="transparent"
       />    
