@@ -75,7 +75,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ```
  # Para iniciar a aplicação, primeiro inicie a API<h3/>
 ```
-  yarn server
+  yarn api
 ```
   # Rode o metro bundler<h3/>
 ```
@@ -98,7 +98,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
   import axios from 'axios';
 
   const api = axios.create({
-     baseURL: 'http://<um-ip-qualquer>:3333/',
+     baseURL: 'http://<seu-ip>:3333/',
    });
 
    export default api;
@@ -111,3 +111,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
   
   ## 📝Licença
   <h4> Esse projeto se encontra sob a licença MIT. Para mais informações, acesse o arquivo LICENSE.</h4>
+  
+  ## Qualquer dúvida entre em contato por <a href="mailto:rodrigoleitesouzadev@gmail.com?">leandrorvieira22@yahoo.com</a>
+
+ [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/leandro-rezende-vieira-23a212242/)](https://www.linkedin.com/in/leandro-rezende-vieira-23a212242/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:leandrorvieira22@yahoo.com)](mailto:leandrorvieira22@yahoo.com)
+[![WhatsApp Badge](https://img.shields.io/badge/WhatsApp-0DA204?style=flat-square&logo=whatsapp&logoColor=white)](https://wa.me/5521995925956)
