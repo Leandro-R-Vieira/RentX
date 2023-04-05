@@ -55,7 +55,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - Instalar o [yarn](https://yarnpkg.com/)
 - Instalar e configurar o [Android Studio](https://developer.android.com/studio)
-- Baixar e configurar o [backend] da aplicação(https://github.com/LaurentinoMarcelo/RentX-Rocketseat)
+- Baixar e configurar o [backend] da aplicação(https://github.com/Leandro-R-Vieira/RentX)
 
 ---
 
