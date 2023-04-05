@@ -21,9 +21,9 @@ Projeto de uma locadora de carros digital e fictícia, consumindo API local poss
 ---
 
 
-## 📱Aplicanção
+## 📱Aplicação
 
-<img title="GoFinances" src="./Capa.png" />
+![rentx](https://user-images.githubusercontent.com/103189479/230119516-9bd8fcf8-7b23-4ba3-92b4-c6e42409b46c.gif)
   
 ---  
 
@@ -71,7 +71,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ```
   # Navegue até a pasta do projeto e baixe as dependências<h3/>
 ```
-  cd gofinance && yarn
+  cd rentx && yarn
+```
+ # Para iniciar a aplicação, primeiro inicie a API<h3/>
+```
+  yarn server
 ```
   # Rode o metro bundler<h3/>
 ```
